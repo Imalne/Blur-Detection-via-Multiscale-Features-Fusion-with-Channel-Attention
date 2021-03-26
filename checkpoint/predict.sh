@@ -1,0 +1,17 @@
+python3 predict.py \
+--out_dir "./submit" \
+--weight_path best_net_re3_epoch=350.pth \
+--model_type re3 \
+--backbone combine_resnet_18+resnet_34 \
+--reunit_type 3 \
+--reunit_skipconnect 0 \
+--dropout_probs 0 \
+--recurrent_time 1 \
+--image_dir "/data1/qinrui/DataSets/CUHK6/test_A/" \
+--target_dir "/data1/qinrui/DataSets/CUHK6/test_B/" \
+--class_num 2 \
+--recur_time 1 \
+--merge_img \
+--mode single \
+--padOrCrop crop \
+--outlayer_type 4

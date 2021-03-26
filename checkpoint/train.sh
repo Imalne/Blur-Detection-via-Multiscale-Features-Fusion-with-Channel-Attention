@@ -1,0 +1,31 @@
+python ../train.py \
+--train_A  /Users/whale/Documents/DataSets/CUHK10/train_A \
+--train_B  /Users/whale/Documents/DataSets/CUHK10/train_B \
+--train_C  /Users/whale/Documents/DataSets/CUHK10/train_C \
+--valid_A  /Users/whale/Documents/DataSets/CUHK10/valid_A \
+--valid_B  /Users/whale/Documents/DataSets/CUHK10/valid_B \
+--valid_C  /Users/whale/Documents/DataSets/CUHK10/valid_C \
+--batch_size 4 \
+--aug \
+--model_type re_sk_ms \
+--optimizer Adam \
+--loss_type MS_CE \
+--epoch_num 350 \
+--class_num 2 \
+--backbone_type seresnet_18 \
+--reunit_type  \
+--reunit_skipconnect  \
+--dropout_probs 0 \
+--recurrent_time 0 \
+--loss_weights  \
+--cross_validate \
+--cross_interval 100 \
+--lr_manage_type stage \
+--epoch_stages 0 250 \
+--lr_stages 1 0.1 \
+--max_lr 0.0001 \
+--outlayer_type 6 \
+--best_start 300 \
+--CE_Thre 0 0 0 0 0 0 \
+--edge_mask_initial 1 1 1 1 1 1 \
+--save_dir ./

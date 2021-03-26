@@ -1,0 +1,15 @@
+python predict.py \
+--out_dir "./submit" \
+--weight_path best_net_re3_epoch=350.pth \
+--model_type re3 \
+--backbone combine_resnet_18+resnet_34 \
+--reunit_type \
+--reunit_skipconnect \
+--dropout_probs 0 \
+--recurrent_time 0 \
+--image_dir "./input" \
+--class_num 2 \
+--recur_time 0 \
+--mode single \
+--padOrCrop pad \
+--outlayer_type 8
